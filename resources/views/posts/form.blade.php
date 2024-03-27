@@ -17,7 +17,7 @@
                         @isset($post)
                             @method('put')
                         @endisset
-
+                
                         <div>
                             <x-input-label for="title" value="Title" />
                             <x-text-input id="title" name="title" type="text" class="mt-1 block w-full" :value="$post->title ?? old('title')" required autofocus />
@@ -34,7 +34,7 @@
                         <div>
                             <x-input-label for="featured_image" value="Featured Image" />
                             <label class="block mt-2">
-                                <span class="sr-only">Pilih Foto</span>
+                                <span class="sr-only">Choose image</span>
                                 <input type="file" id="featured_image" name="featured_image" accept=".jpg, .jpeg, .png" class="block w-full text-sm text-slate-500
                                     file:mr-4 file:py-2 file:px-4
                                     file:rounded-full file:border-0
@@ -48,9 +48,9 @@
                             </div>
                             <x-input-error class="mt-2" :messages="$errors->get('featured_image')" />
                         </div>
-
+                
                         <div class="flex items-center gap-4">
-                            <x-primary-button>{{ __('Simpan') }}</x-primary-button>
+                            <x-primary-button>{{ __('Save') }}</x-primary-button>
                         </div>
                     </form>
                 </div>

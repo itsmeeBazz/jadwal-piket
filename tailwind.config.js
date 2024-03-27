@@ -10,6 +10,12 @@ module.exports = {
 
     theme: {
         extend: {
+            textColor: {
+                primary: "#02A04B"
+            },
+            backgroundColor: {
+                primary: "#E6FBF0"
+            },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },

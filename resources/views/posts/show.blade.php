@@ -11,7 +11,7 @@
                 <div class="p-6 text-gray-900">
                     <div class="mb-6">
                         <h2 class="text-lg font-medium text-gray-900">
-                            {{ 'Nama' }}
+                            {{ 'Title' }}
                         </h2>
 
                         <p class="mt-1 text-sm text-gray-600">
@@ -20,7 +20,7 @@
                     </div>
                     <div class="mb-6">
                         <h2 class="text-lg font-medium text-gray-900">
-                            {{ 'Keterangan' }}
+                            {{ 'Content' }}
                         </h2>
 
                         <p class="mt-1 text-sm text-gray-600">
@@ -29,11 +29,11 @@
                     </div>
                     <div class="mb-6">
                         <h2 class="text-lg font-medium text-gray-900">
-                            {{ 'Bukti Piket' }}
+                            {{ 'Featured Image' }}
                         </h2>
 
                         <p class="mt-1 text-sm text-gray-600">
-                            <img class="h-64 w-128" src="{{ Storage::url($post->featured_image) }}" alt="{{ $post->title }}" srcset="">
+                            <img class="h-64 w-128" src="{{asset('storage/' . $post->featured_image)}}" alt="{{ $post->title }}" srcset="">
                         </p>
                     </div>
                     <div class="mb-6">
