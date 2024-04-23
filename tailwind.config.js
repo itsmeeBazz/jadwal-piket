@@ -14,7 +14,11 @@ module.exports = {
                 primary: "#02A04B"
             },
             backgroundColor: {
-                primary: "#E6FBF0"
+                primary: "#E6FBF0",
+                secondary: "#4E944F"
+            },
+            borderColor: {
+                primary: "#02A04B",
             },
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],

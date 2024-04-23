@@ -1,39 +1,32 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-        <script src="https://cdn.tailwindcss.com"></script>
-    </head>
-    <body>
-        <div class="w-full bg-primary h-auto">
-            <div class="w-full h-[4.5rem]">
-                @include('layouts.nav-bar')
-            </div>
-            <div class="w-[90%] mx-auto h-auto flex-col">
-                <div class="w-full flex justify-between">
-                    <div class="w-[48%]">
-                        <x-card>
-                            <h1 class="text-lg bg-primary font-bold">Abas</h1>
-                            <h1 class="text-sm font-bold">Abas</h1>
-                            <h1 class="text-sm font-bold">Abas</h1>
-                            <h1 class="text-sm font-bold">Abas</h1>
-                        </x-card>
-                    </div>
-                    <div class="w-[48%]">
-                        <x-card>
-                            <h1 class="text-lg font-bold">Abas</h1>
-                            <h1 class="text-sm font-bold">Abas</h1>
-                            <h1 class="text-sm font-bold">Abas</h1>
-                            <h1 class="text-sm font-bold">Abas</h1>
-                        </x-card>
-                    </div>
+@extends('layouts.layout')
+@section('header')
+    {{-- App Header --}}
+    <nav class="bg-white flex shadow-md w-full h-[5rem] items-center justify-center">
+        <h1 class="text-primary text-center text-2xl font-semibold">Kelas XI PPLG TEFA</h1>
+    </nav>
+@endsection
+@section('content')
+    <div class="w-full bg-primary h-auto">
+        <div class="w-[90%] mx-auto h-auto flex-col">
+            <div class="w-full flex-wrap justify-between">
+                <div class="w-[48%]">
+                    <x-card>
+                        <div class="w-full h-full bg-slate-500">
+                            {{-- <div>{{ Auth::user()->name }}</div> --}}
+                            <h1 class="text-lg text-center font-bold">Yogo</h1>
+                        </div>
+                    </x-card>
                 </div>
+                <div class="w-[48%]">
+                    <x-card>
+                        <div class="w-full h-full bg-slate-500">
+                            {{-- <div>{{ Auth::user()->name }}</div> --}}
+                            <h1 class="text-lg text-center font-bold">Yogo</h1>
+                        </div>
+                    </x-card>
+                </div>
+
             </div>
-            <x-footer></x-footer>
         </div>
-    </body>
-</html>
+    </div>
+@endsection

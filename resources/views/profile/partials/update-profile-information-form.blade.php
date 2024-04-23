@@ -18,6 +18,24 @@
         @method('patch')
 
         <div>
+            <x-input-label for="featured_image" value="Featured Image" />
+                                <label class="block mt-2">
+                                    <span class="sr-only">Choose image</span>
+                                    <input type="file" id="featured_image" name="featured_image" accept=".jpg, .jpeg, .png" class="block w-full text-sm text-slate-500
+                                        file:mr-4 file:py-2 file:px-4
+                                        file:rounded-full file:border-0
+                                        file:text-sm file:font-semibold
+                                        file:bg-violet-50 file:text-violet-700
+                                        hover:file:bg-violet-100
+                                    "/>
+                                </label>
+            <div class="shrink-0 my-2">
+                <img id="featured_image_preview" class="h-64 w-128 object-cover rounded-md" src="{{ isset($post) ? Storage::url($post->featured_image) : '' }}" alt="Featured image preview" />
+            </div>
+            <x-input-error class="mt-2" :messages="$errors->get('featured_image')" />
+        </div>
+
+        <div>
             <x-input-label for="name" :value="__('Name')" />
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
@@ -61,4 +79,14 @@
             @endif
         </div>
     </form>
+    <script>
+        // create onchange event listener for featured_image input
+        document.getElementById('featured_image').onchange = function(evt) {
+            const [file] = this.files
+            if (file) {
+                // if there is an image, create a preview in featured_image_preview
+                document.getElementById('featured_image_preview').src = URL.createObjectURL(file)
+            }
+        }
+    </script>
 </section>
