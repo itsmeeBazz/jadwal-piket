@@ -9,11 +9,10 @@
     <div class="w-full h-auto">
         <div class="container items-center mt-3">
             <div class="webcam-capture"></div>
-            <button id="takeabsen" class="btn-block btn btn-primary"></button>
+            <button id="takeabsen" class="btn-block btn btn-primary">Take Absen</button>
         </div>
         <h1 class="text-lg font-bold mt-5">Bukti Piket</h1>
-
-            <textarea name="keterangan" id="keterangan" placeholder="Keterangan" cols="30" rows="10" class="w-[90%] rounded-lg h-auto border-primary"></textarea>
+        <textarea name="keterangan" id="keterangan" placeholder="Keterangan" cols="30" rows="10" class="w-[90%] rounded-lg h-auto border-primary"></textarea>
     </div>
 
     <style>
@@ -39,5 +38,13 @@
     });
 
     Webcam.attach('.webcam-capture');
+
+    $("#takeabsen").click(function(){
+        // (Webcam.snap(function(uri){
+        //     image = uri;
+        // }));
+
+        alert('tes');
+    });
 </script>
 @endpush
