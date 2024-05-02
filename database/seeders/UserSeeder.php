@@ -13,7 +13,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        $abas = User::createOrUpdate([
+        $abas = User::create([
             'name' => 'abas',
             'email' => 'abas@gmail.com',
             'password' => bcrypt(12345678),
