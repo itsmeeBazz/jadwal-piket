@@ -7,7 +7,7 @@
         <script src="https://cdn.tailwindcss.com"></script>
         {{-- <link rel="shortcut icon" href="{{asset('assets/img/logo.png')}}"> --}}
         <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-
+        <link rel="shortcut icon" href="{{asset('assets/img/logo.png')}}">
         <title>{{ config('app.name', 'Laravel') }}</title>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])

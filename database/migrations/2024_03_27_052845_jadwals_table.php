@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('jadwals', function (Blueprint $table) {
             $table->id();
             $table->string('hari');
-            $table->foreign('hari')->references('');
+            // $table->foreign('hari');
             $table->string('nama');
             $table->timestamps();
         });

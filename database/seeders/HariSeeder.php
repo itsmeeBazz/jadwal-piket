@@ -13,24 +13,24 @@ class HariSeeder extends Seeder
      */
     public function run(): void
     {
-        $senin = Hari::create([
-            'hari' => 'senin',
-        ]);
+        // $senin = Hari::create([
+        //     'hari' => 'senin',
+        // ]);
 
-        $selasa = Hari::create([
-            'hari' => 'selasa',
-        ]);
+        // $selasa = Hari::create([
+        //     'hari' => 'selasa',
+        // ]);
 
-        $rabu = Hari::create([
-            'hari' => 'rabu',
-        ]);
+        // $rabu = Hari::create([
+        //     'hari' => 'rabu',
+        // ]);
 
-        $kamis = Hari::create([
-            'hari' => 'kamis',
-        ]);
+        // $kamis = Hari::create([
+        //     'hari' => 'kamis',
+        // ]);
 
-        $jumat = Hari::create([
-            'hari' => 'jumat',
-        ]);
+        // $jumat = Hari::create([
+        //     'hari' => 'jumat',
+        // ]);
     }
 }
