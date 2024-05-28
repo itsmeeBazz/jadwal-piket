@@ -18,7 +18,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             // $table->string('nis');
-            // $table->string('role');
+            $table->string('profile_image')->nullable();
+            $table->string('role')->default('siswa');
             $table->rememberToken();
             $table->timestamps();
         });

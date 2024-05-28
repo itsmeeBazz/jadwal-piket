@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Jadwal;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    function index(){
-        return view('home');
+    public function index()
+    {
+        $days = Jadwal::all();
+        return view('home', compact('days'));
     }
 }

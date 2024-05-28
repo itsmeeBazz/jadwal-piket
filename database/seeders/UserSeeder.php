@@ -17,6 +17,7 @@ class UserSeeder extends Seeder
             'name' => 'abas',
             'email' => 'abas@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $abas->assignRole('siswa');
 
@@ -24,6 +25,7 @@ class UserSeeder extends Seeder
             'name' => 'aflah',
             'email' => 'aflah@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $aflah->assignRole('siswa');
 
@@ -31,6 +33,7 @@ class UserSeeder extends Seeder
             'name' => 'wahyu',
             'email' => 'wahyu@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $wahyu->assignRole('siswa');
 
@@ -38,6 +41,7 @@ class UserSeeder extends Seeder
             'name' => 'akhdan',
             'email' => 'akhdan@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $akhdan->assignRole('siswa');
 
@@ -45,6 +49,7 @@ class UserSeeder extends Seeder
             'name' => 'asya',
             'email' => 'asya@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $asya->assignRole('siswa');
 
@@ -52,6 +57,7 @@ class UserSeeder extends Seeder
             'name' => 'ania',
             'email' => 'ania@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $ania->assignRole('siswa');
 
@@ -59,6 +65,7 @@ class UserSeeder extends Seeder
             'name' => 'derren',
             'email' => 'derren@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $derren->assignRole('siswa');
 
@@ -66,6 +73,7 @@ class UserSeeder extends Seeder
             'name' => 'rully',
             'email' => 'rully@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $rully->assignRole('siswa');
 
@@ -73,6 +81,7 @@ class UserSeeder extends Seeder
             'name' => 'dimasaditya',
             'email' => 'dimasaditya@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $dimasaditya->assignRole('siswa');
 
@@ -80,6 +89,7 @@ class UserSeeder extends Seeder
             'name' => 'dimasfeb',
             'email' => 'dimasfeb@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $dimasfeb->assignRole('siswa');
 
@@ -87,6 +97,7 @@ class UserSeeder extends Seeder
             'name' => 'eka',
             'email' => 'eka@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $eka->assignRole('siswa');
 
@@ -94,6 +105,7 @@ class UserSeeder extends Seeder
             'name' => 'erni',
             'email' => 'erni@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $erni->assignRole('siswa');
 
@@ -102,6 +114,7 @@ class UserSeeder extends Seeder
             'name' => 'faiq',
             'email' => 'faiq@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $faiq->assignRole('siswa');
 
@@ -109,6 +122,7 @@ class UserSeeder extends Seeder
             'name' => 'arifin',
             'email' => 'arifin@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $arifin->assignRole('siswa');
 
@@ -117,6 +131,7 @@ class UserSeeder extends Seeder
             'name' => 'fiqi',
             'email' => 'fiqi@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $fiqi->assignRole('siswa');
 
@@ -124,6 +139,7 @@ class UserSeeder extends Seeder
             'name' => 'rifal',
             'email' => 'rifal@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $rifal->assignRole('siswa');
 
@@ -131,6 +147,7 @@ class UserSeeder extends Seeder
             'name' => 'taufiq',
             'email' => 'taufiq@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $taufiq->assignRole('siswa');
 
@@ -138,6 +155,7 @@ class UserSeeder extends Seeder
             'name' => 'nay',
             'email' => 'nay@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $nay->assignRole('siswa');
 
@@ -145,6 +163,7 @@ class UserSeeder extends Seeder
             'name' => 'rafly',
             'email' => 'rafly@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $rafly->assignRole('siswa');
 
@@ -152,6 +171,7 @@ class UserSeeder extends Seeder
             'name' => 'rizka',
             'email' => 'rizka@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $rizka->assignRole('siswa');
 
@@ -159,6 +179,7 @@ class UserSeeder extends Seeder
             'name' => 'shofi',
             'email' => 'shofi@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $shofi->assignRole('siswa');
 
@@ -166,6 +187,7 @@ class UserSeeder extends Seeder
             'name' => 'wafa',
             'email' => 'wafa@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $wafa->assignRole('siswa');
 
@@ -173,6 +195,7 @@ class UserSeeder extends Seeder
             'name' => 'zunaldo',
             'email' => 'zunaldo@gmail.com',
             'password' => bcrypt(12345678),
+            'role' => 'siswa'
         ]);
         $zunaldo->assignRole('siswa');
 
@@ -180,6 +203,7 @@ class UserSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@gmail.com',
             'password' => bcrypt('entahlah'),
+            'role' => 'admin'
         ]);
         $admin->assignRole('admin');
     }

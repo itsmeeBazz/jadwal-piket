@@ -19,9 +19,6 @@
                         <x-nav-link :href="route('jadwal')" :active="request()->routeIs('jadwal')">
                             {{'Jadwal' }}
                         </x-nav-link>
-                        <x-nav-link :href="route('posts.index')" :active="request()->routeIs('posts.index')">
-                            {{'Posts' }}
-                        </x-nav-link>
                     @endif
                 </div>
             </div>
@@ -42,8 +39,8 @@
                     </x-slot>
 
                     <x-slot name="content">
-                        <x-dropdown-link :href="route('profile.edit')">
-                            {{ __('Profile') }}
+                        <x-dropdown-link :href="route('home')">
+                            {{ __('Home') }}
                         </x-dropdown-link>
 
                         <!-- Authentication -->

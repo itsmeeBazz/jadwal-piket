@@ -1,30 +1,21 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
+import withMT from "@material-tailwind/html/utils/withMT";
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-    content: [
-        './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
-        './storage/framework/views/*.php',
-        './resources/views/**/*.blade.php',
-    ],
-
-    theme: {
-        extend: {
-            textColor: {
-                primary: "#02A04B"
-            },
-            backgroundColor: {
-                primary: "#E6FBF0",
-                secondary: "#4E944F"
-            },
-            borderColor: {
-                primary: "#02A04B",
-            },
-            fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },
+export default withMT ( {
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.js",
+    "./resources/**/*.vue",
+  ],
+  theme: {
+      extend: {
+        colors: {
+            'text-primary' : '#02A04B',
+            'bg-primary' : "#E6FBF0",
+            'bg-secondary' : "#4E944F",
+            'border-primary' : "#02A04B",
         },
-    },
-
-    plugins: [require('@tailwindcss/forms')],
-};
+        
+      },
+  },
+  plugins: [],
+});

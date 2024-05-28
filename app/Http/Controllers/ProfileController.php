@@ -7,10 +7,15 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\View\View;
 
 class ProfileController extends Controller
 {
+    function index(){
+        return view('info');
+    }
+
     /**
      * Display the user's profile form.
      */
@@ -32,9 +37,21 @@ class ProfileController extends Controller
             $request->user()->email_verified_at = null;
         }
 
+        $request->validate([
+            'profile_image' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // sesuaikan validasi sesuai kebutuhan Anda
+        ]);
+    
+        if ($request->hasFile('profile_image')) {
+            $image = $request->file('profile_image');
+            if(Storage::exists('public/' .Auth::user()->profile_image)){
+                Storage::delete('public/'. Auth::user()->profile_image);
+            }
+            $imageName =  $image->store('profile_images', 'public');
+            $request->user()->profile_image = $imageName; // Menyimpan nama file ke atribut profile_image
+        };
         $request->user()->save();
-
-        return Redirect::route('profile.edit')->with('status', 'profile-updated');
+        
+        return Redirect::route('profile.index')->with('status', 'profile-updated');
     }
 
     /**
@@ -55,6 +72,6 @@ class ProfileController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return Redirect::to('/');
+        return Redirect::to('/info');
     }
 }

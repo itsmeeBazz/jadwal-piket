@@ -23,7 +23,7 @@ Route::get('/', function () {
     return view('auth.login');
 })->middleware('guest');
 
-Route::get('/home', [HomeController::class, 'index']);
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('auth', 'verified');
 
 // Route::get('/jadwal', function () {
 //     return view('jadwal');
@@ -35,10 +35,10 @@ Route::get('/home', [HomeController::class, 'index']);
 // })->middleware(['auth', 'verified', 'role:admin'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
+    Route::get('/info', [ProfileController::class, 'index'])->name('profile.index');
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
     Route::resource('posts', PostController::class)->middleware('auth','verified', 'role:admin');
 });
 
@@ -47,9 +47,14 @@ Route::get('/jadwal/create', [JadwalController::class, 'create'])->name('jadwal.
 Route::post('/jadwal/store', [JadwalController::class, 'store'])->name('jadwal.store')->middleware('auth', 'verified', 'role:admin');
 Route::get('/jadwal/edit/{id}', [JadwalController::class, 'edit'])->name('jadwal.edit')->middleware('auth', 'verified', 'role:admin');
 Route::post('/jadwal/update/{id}', [JadwalController::class, 'update'])->name('jadwal.update')->middleware('auth', 'verified', 'role:admin');
-Route::post('/jadwal/destroy/{id}', [JadwalController::class, 'destroy'])->name('jadwal.destroy')->middleware('auth', 'verified', 'role:admin');
+Route::delete('/jadwal/destroy/{id}', [JadwalController::class, 'destroy'])->name('jadwal.destroy')->middleware('auth', 'verified', 'role:admin');
 
 // presensi
 Route::get('/presensi', [PresensiController::class, 'create'])->middleware('auth', 'verified');
+Route::post('/presensi/store', [PresensiController::class, 'store'])->name('presensi.store')->middleware('auth', 'verified');
+
+// Histori
+Route::get('/riwayat', [PresensiController::class, 'histori'])->middleware('auth', 'verified');
+Route::get('/log-riwayat', [PresensiController::class, 'logRiwayat'])->name('log-riwayat')->middleware('auth', 'verified');
 
 require __DIR__.'/auth.php';

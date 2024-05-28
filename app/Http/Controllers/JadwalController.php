@@ -17,7 +17,15 @@ class JadwalController extends Controller
     #Halaman Create
     public function create()
     {
-        return view('admin.jadwal.create');
+        $hari = [
+            'Senin',
+            'Selasa',
+            'Rabu',
+            'Kamis',
+            'Jumat',
+        ];
+
+        return view('admin.jadwal.create', compact('hari'));
     }
 
     public function store(Request $request)
@@ -29,7 +37,7 @@ class JadwalController extends Controller
 
         $messages = [
             'nama.required' => 'nama wajib diisi!',
-            'hari.required' => 'Deskripsi wajib diisi!',
+            'hari.required' => 'hari wajib diisi!',
         ];
 
         $this->validate($request, $rules, $messages);
@@ -45,9 +53,11 @@ class JadwalController extends Controller
 
     public function edit($id)
     {
-        $jadwal = Jadwal::find($id);
+        $hari = ['Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat',];
+        $jadwal = Jadwal::find($id);    
         return view('admin.jadwal.edit', [
-            'jadwal' => $jadwal
+            'jadwal' => $jadwal,
+            'hari' => $hari
         ]);
     }
 
