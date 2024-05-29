@@ -6,8 +6,8 @@
     </nav>
 @endsection
 @section('content')
-    <div class="w-full bg-primary bg-[#E6FBF0] h-full">
-        <div class="w-[90%] mx-auto h-screen flex-wrap">
+    <div class="w-full bg-primary bg-[#E6FBF0] h-auto">
+        <div class="w-[90%] mx-auto h-auto flex-wrap">
             <div class="w-full flex flex-wrap justify-between">
                 @php
                     $groupedDays = [];
@@ -26,7 +26,13 @@
                                     <div class="w-5 h-5 relative">
                                         <div class="w-3 h-3 left-[4px] top-[4px] absolute bg-white rounded-full"></div>
                                         <div class="w-5 h-5 left-0 top-0 absolute justify-center items-center inline-flex">
-                                            <div class="w-5 h-5 relative"></div>
+                                            @if ($day == Auth::user()->name)
+                                                <div class="w-5 h-5 relative">
+                                                    <div class="">lkandlkan</div>
+                                                </div>
+                                            @else
+                                                <div class="w-5 h-5 relative"></div>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>

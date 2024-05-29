@@ -30,9 +30,8 @@
                     <form class=" w-[40%] items-center flex justify-end" method="POST" action="{{ route('logout') }}">
                         @csrf
                         <div class="text-center hover:cursor-pointer flex flex-col gap-1 justify-center items-center w-auto right-[7rem] top-[4.6rem]">
-                            <img class="items-center justify-center" src="{{ asset('assets/svg/logout.svg') }}" alt="">
                             <button type="submit" class="bg-transparent border-none text-sm cursor-pointer">
-                                Logout
+                                <img class="items-center justify-center" src="{{ asset('assets/svg/logout.svg') }}" alt="">Logout
                             </button>
                         </div>
                     </form>

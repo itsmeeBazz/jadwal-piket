@@ -12,7 +12,8 @@
         <div class="w-[90%] h-screen bg-[#E6FBF0] mx-auto flex flex-col">
             <div id="kamera" class="webcam-capture"></div>
             @if ($cek > 0)
-                <button id="takeabsen" class="btn-block btn disabled:btn-primary">Take Absen</button>
+                <div class="">Anda Sudah </div>
+                <button id="takeabsen" class="hover:cursor-pointer text-white b bg-[#02C05A] rounded-lg h-14">Take Absen</button>
             @else
                 <button id="takeabsen" class="hover:cursor-pointer text-white bg-[#02C05A] rounded-lg h-14">Kirim</button>
             @endif
@@ -75,10 +76,10 @@
                         })
                     }else{
                         Swal.fire({
-                            title: 'Error!',
-                            text: 'Do you want to continue',
-                            icon: 'error',
-                            confirmButtonText: 'Cool'
+                            title: 'Berhasil!',
+                            text: 'Terimakasih ',
+                            icon: 'succes',
+                            confirmButtonText: 'Oke'
                         })
                     }
                 }

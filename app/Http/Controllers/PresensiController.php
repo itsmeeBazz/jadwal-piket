@@ -32,50 +32,50 @@ class PresensiController extends Controller
         $cek = DB::table('pikets')->where('tanggal', $tanggal)->where('nama', $nama)->count();
 
         // update data
-        // if ($cek > 0) {
-        //     $data_update = [
-        //         'nama' => $nama,
-        //         'tanggal' => $tanggal,
-        //         'jam' => $jam,
-        //         'foto' => $file
-        //     ];
-        //     $update = DB::table('pikets')->where('tanggal', $tanggal)->where('nama', $nama)->update($data_update);
-        //     if ($update) {
-        //         echo "0";
-        //         Storage::put($file, $image_base64);
-        //     } else{
-        //         echo" 1";
-        //     }
-        // }   else{
-        //     $data = [
-        //         'nama' => $nama,
-        //         'tanggal' => $tanggal,
-        //         'jam' => $jam,
-        //         'foto' => $file
-        //     ];
+        if ($cek > 0) {
+            $data_update = [
+                'nama' => $nama,
+                'tanggal' => $tanggal,
+                'jam' => $jam,
+                'foto' => $file
+            ];
+            $update = DB::table('pikets')->where('tanggal', $tanggal)->where('nama', $nama)->update($data_update);
+            if ($update) {
+                echo "0";
+                Storage::put($file, $image_base64);
+            } else{
+                echo" 1";
+            }
+        }   else{
+            $data = [
+                'nama' => $nama,
+                'tanggal' => $tanggal,
+                'jam' => $jam,
+                'foto' => $file
+            ];
     
-        //     $simpan = DB::table('pikets')->insert($data);
-        //     if($simpan){
-        //         echo "0";
-        //         Storage::put($file, $image_base64);
-        //     }else{
-        //         echo "1";
-        //     }
-        // }
-        $data = [
-            'nama' => $nama,
-            'tanggal' => $tanggal,
-            'jam' => $jam,
-            'foto' => $file
-        ];
-
-        $simpan = DB::table('pikets')->insert($data);
-        if($simpan){
-            echo "Terimakasih";
-            Storage::put($file, $image_base64);
-        }else{
-            echo "error|";
+            $simpan = DB::table('pikets')->insert($data);
+            if($simpan){
+                echo "Terimakasih";
+                Storage::put($file, $image_base64);
+            }else{
+                echo "error";
+            }
         }
+        // $data = [
+        //     'nama' => $nama,
+        //     'tanggal' => $tanggal,
+        //     'jam' => $jam,
+        //     'foto' => $file
+        // ];
+
+        // $simpan = DB::table('pikets')->insert($data);
+        // if($simpan){
+        //     echo "Terimakasih";
+        //     Storage::put($file, $image_base64);
+        // }else{
+        //     echo "error|";
+        // }
     }
 
     public function histori(){
@@ -83,10 +83,8 @@ class PresensiController extends Controller
         return view('presensi.histori', compact('data'));
     }
 
-    public function logRiwayat(){
-        $nama = Auth::user()->name;
-        return view('presensi.log-riwayat', compact('nama'));
+    public function logRiwayat($id){
+        $histori = DB::table('pikets')->where('nama', $id)->get();
+        return view('presensi.log-riwayat', compact('histori'));
     }
-
-    
 }

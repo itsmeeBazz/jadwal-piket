@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <script src="https://cdn.tailwindcss.com"></script>
-        {{-- <link rel="shortcut icon" href="{{asset('assets/img/logo.png')}}"> --}}
         <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
         <link rel="shortcut icon" href="{{asset('assets/img/logo.png')}}">
         <title>{{ config('app.name', 'Laravel') }}</title>

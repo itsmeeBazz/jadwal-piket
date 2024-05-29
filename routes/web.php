@@ -55,6 +55,6 @@ Route::post('/presensi/store', [PresensiController::class, 'store'])->name('pres
 
 // Histori
 Route::get('/riwayat', [PresensiController::class, 'histori'])->middleware('auth', 'verified');
-Route::get('/log-riwayat', [PresensiController::class, 'logRiwayat'])->name('log-riwayat')->middleware('auth', 'verified');
+Route::get('/log-riwayat/{id}', [PresensiController::class, 'logRiwayat'])->name('log-riwayat')->middleware('auth', 'verified');
 
 require __DIR__.'/auth.php';
