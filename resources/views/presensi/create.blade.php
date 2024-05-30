@@ -70,9 +70,9 @@
                     if(respond == "0"){
                         Swal.fire({
                             title: 'Berhasil!',
-                            text: '',
+                            text: 'Terimakasih',
                             icon: 'succes',
-                            confirmButtonText: 'Cool'
+                            confirmButtonText: 'Oke'
                         })
                     }else{
                         Swal.fire({

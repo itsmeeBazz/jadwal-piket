@@ -52,8 +52,8 @@
                 </div>
                 <div class="gap-4">
                     <h1 class="text-black text-xl font-medium">Kontak</h1>
-                    <p class="text-[#565656] text-base">E-mail   : janardana@gmail.com</p>
-                    <p class="text-[#565656] text-base">E-mail   : janardana@gmail.com</p>
+                    <p class="text-[#565656] text-base">E-mail   : saktiawanabas@gmail.com</p>
+                    <p class="text-[#565656] text-base">E-mail   : wahyuwinandarizka@gmail.com</p>
                 </div>
                 <div class="gap-4">
                     <h1 class="text-black text-xl font-medium">Alamat</h1>
